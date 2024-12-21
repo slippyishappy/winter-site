@@ -1,0 +1,123 @@
+:root {
+    --bg: #8ED0F4;
+    --white: #FFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100vh;
+    background-color: var(--bg);
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.ground {
+    width: 920px;
+    height: 520px;
+    border-radius: 100%;
+    background: var(--white);
+    margin-bottom: -35%;
+}
+
+.snowman {
+    width: 900px;
+    height: 400px;
+    position: absolute;
+    bottom: 7rem;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.tree-front-left, .tree-front-right {
+    width: 200px;
+    height: 240px;
+    position: relative;
+}
+
+.tree-front-left {
+    bottom: -9rem;
+    z-index: 1;
+    left: 5rem;
+}
+
+.tree-front-right {
+    transform: scaleX(-1);
+    bottom: -9rem;
+    z-index: 1;
+    right: -25rem;
+}
+
+.breeze {
+    position: absolute;
+    width: 100vw;
+    bottom: 30%;
+}
+
+.moon {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    z-index: 1;
+}
+
+.moon>* {
+    width: 100px;
+}
+
+.snowflake {
+    position: absolute;
+    top: -40px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--white);
+    animation: fall linear infinite;
+    border-radius: 100%;
+}
+
+.f-1, .f-2, .f-3, .f-4 {
+    position: relative;
+    z-index: -1;
+}
+
+.f-1 {
+    transform: rotate(2deg);
+    left: -12rem;
+    bottom: -5rem;
+    height: 128px;
+}
+
+.f-2 {
+    transform: rotate(-14deg);
+    left: -28rem;
+    bottom: -10rem;
+    height: 172px;
+}
+
+.f-3 {
+    transform: scaleX(-1);
+    right: 2rem;
+    height: 162px;
+    bottom: -5rem;
+}
+
+.f-4 {
+    transform: rotate(12deg);
+    height: 182px;
+    bottom: -8rem;
+    right: -1rem;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(640px) translateX(20px);
+        opacity: 0.5;
+    }
+}
