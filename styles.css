@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
 :root {
     --bg: #8ED0F4;
     --white: #FFF;
@@ -12,7 +14,18 @@ body {
     height: 100vh;
     background-color: var(--bg);
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: "Delius", sans-serif;
+}
+
+.title {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 3rem;
+    z-index: 2;
+    text-align: center;
 }
 
 .ground {
